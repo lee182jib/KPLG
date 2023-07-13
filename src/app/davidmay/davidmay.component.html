@@ -1,0 +1,60 @@
+<h3>GK</h3>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col" *ngFor="let element of elements[0]; let i = index">
+    <div class="card w-75 mx-auto">
+      <img [src]="getPhotoUrl(element.photo)" class="card-img-top" alt="{{element.web_name}}"/>
+      <div class="card-body">
+        <h5 class="card-title">{{element.web_name}}</h5>
+        <p class="card-text">Total Points: {{element.total_points}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>DF</h3>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col" *ngFor="let element of elements[1]; let i = index">
+    <div class="card w-75 mx-auto">
+      <img [src]="getPhotoUrl(element.photo)" class="card-img-top" alt="{{element.web_name}}"/>
+      <div class="card-body">
+        <h5 class="card-title">{{element.web_name}}</h5>
+        <p class="card-text">Total Points: {{element.total_points}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card w-75 mx-auto">
+      <img src="/assets/images/dMay4removebg.png" class="card-img-top" alt="example"/>
+      <div class="card-body">
+        <h5 class="card-title">David May</h5>
+        <p class="card-text">Total Points: {{ elements[1][0].total_points + 1}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>MD</h3>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col" *ngFor="let element of elements[2]; let i = index">
+    <div class="card w-75 mx-auto">
+      <img [src]="getPhotoUrl(element.photo)" class="card-img-top" alt="{{element.web_name}}"/>
+      <div class="card-body">
+        <h5 class="card-title">{{element.web_name}}</h5>
+        <p class="card-text">Total Points: {{element.total_points}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>FW</h3>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col" *ngFor="let element of elements[3]; let i = index">
+    <div class="card w-75 mx-auto">
+      <img [src]="getPhotoUrl(element.photo)" class="card-img-top" alt="{{element.web_name}}"/>
+      <div class="card-body">
+        <h5 class="card-title">{{element.web_name}}</h5>
+        <p class="card-text">Total Points: {{element.total_points}}</p>
+      </div>
+    </div>
+  </div>
+</div>

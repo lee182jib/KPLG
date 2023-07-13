@@ -1,0 +1,17 @@
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col" *ngFor="let element of elements">
+    <div class="card w-75 mx-auto">
+      <img [src]="getPhotoUrl(element.photo)" class="card-img-top" alt="{{element.web_name}}"/>
+      <div class="card-body">
+        <h5 class="card-title">{{element.web_name}}</h5>
+        <p class="card-text">Total Points: {{element.total_points}}</p>
+        <p class="card-text">Chucks this week: {{element.transfers_out_event}}</p>
+        <p class="card-text">Chucks this season: {{element.transfers_out}}</p>
+        <p class="card-text">Recent news: {{element.news ? element.news : "No news available"}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
