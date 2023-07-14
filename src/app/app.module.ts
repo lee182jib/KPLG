@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { StinkersComponent } from './stinkers/stinkers.component';
 import { DavidmayComponent } from './davidmay/davidmay.component';
+import { HipsterComponent } from './hipster/hipster.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DavidmayComponent } from './davidmay/davidmay.component';
     HeaderComponent,
     FooterComponent,
     StinkersComponent,
-    DavidmayComponent
+    DavidmayComponent,
+    HipsterComponent
   ],
   imports: [
     BrowserModule,
