@@ -1,8 +1,24 @@
 <h1>Goals Scored Predictions</h1>
 <app-top-player [firstElement]="elements[0]"></app-top-player>
-<ul>
-  <li *ngFor="let element of elements">
-    {{ element.web_name }} - {{ element.expected_goals }} expected goals. {{ element.element_type}}
-  </li>
-</ul>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Predicted Goals per Game</th>
+      <th scope="col">Goals </th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let element of elements">
+      <th scope="row">{{ element.web_name }}</th>
+      <td>{{ element.expected_goals_per_90}}</td>
+      <td>{{ element.goals_scored}}</td>
+      <td>@mdo</td>
+    </tr>
+    
+  </tbody>
+</table>
 
