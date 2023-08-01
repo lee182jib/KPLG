@@ -1,14 +1,32 @@
 <div class="container">
+  <div class="comp-title row">
+    <h1 class="text-center">Hipster Calculator</h1>
+    <h3 class="text-center">Don’t follow the crowd, find your own hidden gems and dominate the game.</h3>
+
+    <h5 class="intro">The Hipster Calculator is a unique tool that helps you pick the top scoring players who are not
+      widely owned. It only selects the players who are owned by no more than a certain percentage of managers. To avoid
+      the stinkers you can alter the minimum points. You might be surprised by some of the hidden gems that the tool
+      will find for you.</h5>
+  </div>
   <div class="row">
+
     <div class="col-md-4">
       <div class="input-group mb-3 mt-3">
         <label for="percent" class="input-group-text">Percent:</label>
         <input type="number" [(ngModel)]="percent" id="percent" class="form-control">
-        <button (click)="reloadData()" class="btn btn-primary">Reload Data</button>
+        <button (click)="reloadData()" class="btn">Change %</button>
       </div>
     </div>
     <div class="col-md-4">
-      <select [(ngModel)]="selectedElement" name="selectedElement" id="selectedElement" class="form-control mt-3" (change)="getHipsterPlayers()">
+      <div class="input-group mb-3 mt-3">
+        <label for="points" class="input-group-text">Points:</label>
+        <input type="number" [(ngModel)]="totalPoints" id="points" class="form-control">
+        <button (click)="reloadData()" class="btn btn-primary">Change Minimum Points</button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <select [(ngModel)]="selectedElement" name="selectedElement" id="selectedElement" class="form-control mt-3"
+        (change)="getHipsterPlayers()">
         <option value="1">Goalkeepers</option>
         <option value="2">Defenders</option>
         <option value="3">Midfielders</option>
@@ -18,11 +36,12 @@
   </div>
 
   <div class="row mt-4">
-    <div class="col-md-3" *ngFor="let element of elements">
+    <div class="col-md-3" *ngFor="let element of elements; let i = index">
       <div class="card mb-3">
-        <img [src]="getPhotoUrl(element.photo)" class="card-img-top" alt="{{element.web_name}}"/>
+        <div class="card-footer">{{i + 1}}</div>
+        <img [src]="getPhotoUrl(element.photo)" class="card-img-top" alt="{{element.web_name}}" />
         <div class="card-body">
-          <h5 class="card-title">{{element.web_name}}</h5>
+          <h3 class="card-title">{{element.web_name}}</h3>
           <p class="card-text">Total Points: {{element.total_points}}</p>
           <p class="card-text">Selected by {{element.selected_by_percent}}% of managers</p>
           <p class="card-text">Chucks this season: {{element.transfers_out}}</p>

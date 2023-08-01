@@ -1,6 +1,16 @@
+<div class="container"><div class="comp-title row">
+  <h1 class="text-center">Stinkers of the Week</h1>
+  <h3 class="text-center">Avoid the bad smell and improve your game</h3>
+
+  <h5 class="intro">There are some players who can ruin your team’s performance like a bad smell. You don’t want to have them in your team, but how do you know who they are? That’s where our tool comes in. It shows you the players who are being transferred out by most managers. It’s an easy way to spot the players who are not worth keeping and who you should replace with better options.</h5>
+</div>
+<app-top-player [firstElement]="elements[0]"></app-top-player>
+<h1 class="text-center">...and the rest</h1>
+
 <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col" *ngFor="let element of elements">
+  <div class="col" *ngFor="let element of elements; let i = index;">
     <div class="card w-75 mx-auto">
+      <div class="card-footer">{{i + 1}}</div>
       <img [src]="getPhotoUrl(element.photo)" class="card-img-top" alt="{{element.web_name}}"/>
       <div class="card-body">
         <h5 class="card-title">{{element.web_name}}</h5>
@@ -12,6 +22,6 @@
     </div>
   </div>
 </div>
-
+</div>
 
 

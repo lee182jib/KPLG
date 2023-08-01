@@ -1,0 +1,22 @@
+.card {
+  background-color: #140f2d;
+  
+}
+
+.card-body h4 {
+  color: #DAE7F0;
+  padding: 5px;
+  width:100% ;
+  font-style: normal;
+}
+
+.card-body button {
+  background-color: #140f2d;
+  color: #DAE7F0;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+

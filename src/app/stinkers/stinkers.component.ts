@@ -8,6 +8,7 @@ import { DataService } from '../data.service';
   providers: [DataService]
 })
 export class StinkersComponent {
+
   elements!: any[];
 
   constructor(private dataService: DataService) {}
@@ -21,7 +22,7 @@ export class StinkersComponent {
       console.log(data);
       this.elements = data.sort((a: any, b: any) => {
         return b.transfers_out - a.transfers_out;
-      }).slice(0, 10);
+      }).slice(0, 50);
     });
   }
 

@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="comp-title row">
+    <h1 class="text-center">Stat Selector</h1>
+    <h3 class="text-center">“I don’t care about statistics. I just want to win trophies.” - Harry Kane</h3>
+
+    <h5 class="intro">Dont make yourself look foolish like Harry Kane. From the menu, pick a stat and discover the top
+      50 players who excel in that area. Find the stats that will make you a winner, unlike Harry. More stat options to be added soon</h5>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      
+    </div>
+    <div class="col-md-4">
+      <select name="selectedStat" [(ngModel)]="selectedStat" class="form-control mt-3"
+        (change)="getElements(selectedStat)">
+        <option value="assists">Assists</option>
+        <option value="clean_sheets">Clean Sheets</option>
+        <option value="starts">Games Started</option>
+        <option value="goals_conceded">Goals Conceded</option>
+        <option value="saves">Goals Saved</option>
+        <option value="goals_scored">Goals Scored</option>
+        <option value="minutes">Minutes Played</option>
+        <option value="own_goals">Own Goals</option>
+        <option value="red_cards">Red Cards</option>
+        <option value="saves_per_90">Saves Per 90 Minutes</option>
+        <option value="total_points">Total Points</option>
+        <option value="yellow_cards">Yellow Cards</option>
+      </select>
+
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-3" *ngFor="let element of elements; let i = index">
+      <div class="card mb-3">
+        <div class="card-footer">{{i + 1}}</div>
+        <img [src]="getPhotoUrl(element.photo)" class="card-img-top" alt="{{element.web_name}}" />
+        <div class="card-body">
+          <h5 class="card-title">{{element.web_name}}</h5>
+          <p class="card-text" *ngIf="selectedStat === 'total_points'">Total Points: {{element.total_points}}</p>
+          <p class="card-text" *ngIf="selectedStat === 'minutes'">Minutes Played: {{element.minutes}}</p>
+          <p class="card-text" *ngIf="selectedStat === 'yellow_cards'">Yellow Cards: {{element.yellow_cards}}</p>
+          <p class="card-text" *ngIf="selectedStat === 'red_cards'">Red Cards: {{element.red_cards}}</p>
+          <p class="card-text" *ngIf="selectedStat === 'goals_scored'">Goals Scored: {{element.goals_scored}}</p>
+          <p class="card-text" *ngIf="selectedStat === 'assists'">Assists: {{element.assists}}</p>
+          <p class="card-text" *ngIf="selectedStat === 'starts'">Games Started: {{element.starts}}</p>
+          <p class="card-text" *ngIf="selectedStat === 'goals_conceded'">Goals Conceded: {{element.goals_conceded}}</p>
+          <p class="card-text" *ngIf="selectedStat === 'saves'">Goals Saved: {{element.saves}}</p>
+          <p class="card-text" *ngIf="selectedStat === 'clean_sheets'">Clean Sheets: {{element.clean_sheets}}</p>
+          <p class="card-text" *ngIf="selectedStat === 'own_goals'">Own Goals: {{element.own_goals}}</p>
+          <p class="card-text" *ngIf="selectedStat === 'saves_per_90'">Saves Per 90 Minutes: {{element.saves_per_90}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

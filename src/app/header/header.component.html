@@ -1,14 +1,13 @@
-<div 
-  id="intro-example" 
-  class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" 
-  style="background-image: url('https://source.unsplash.com/collection/1791496'); min-height: 250px;"
-  >
-  <div class="col-md-5 p-lg-5 mx-auto my-auto">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-    <h1 class="text-white display-4 fw-bold">KPL GAZETTE</h1>
-    <p class="text-light font-weight-normal">date</p>
-    <p class="text-light font-weight-normal">Gameweek</p>
-
+<div class="jumbotron">
+  <div class="container">
+    <img src="/assets/images/logo-dark-blue.png" alt="Logo" class="img-fluid"> 
+    <h1 class="display-4">KPL GAZETTE</h1>
+    <div>
+    <p class="font-weight-normal">{{todayDate | date:'dd/MM/yyyy'}}</p>
+    <p class="font-weight-normal">{{gameweeks[0].name}}</p>
   </div>
   </div>
 </div>
+
+
+

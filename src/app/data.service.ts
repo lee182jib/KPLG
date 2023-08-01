@@ -37,7 +37,8 @@ export class DataService {
   getGameWeeks() {
     return this.http.get('https://fantasy.premierleague.com/api/bootstrap-static/').pipe(
       map((data: any) => {
-        return data.events;
+        let currentGameweek = data.events.find((event: any) => event.is_current === true);
+        return currentGameweek.name;
       })
     );
   }

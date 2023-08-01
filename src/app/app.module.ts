@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { StinkersComponent } from './stinkers/stinkers.component';
 import { DavidmayComponent } from './davidmay/davidmay.component';
 import { HipsterComponent } from './hipster/hipster.component';
+import { StatselectorComponent } from './statselector/statselector.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HipsterComponent } from './hipster/hipster.component';
     FooterComponent,
     StinkersComponent,
     DavidmayComponent,
-    HipsterComponent
+    HipsterComponent,
+    StatselectorComponent
   ],
   imports: [
     BrowserModule,

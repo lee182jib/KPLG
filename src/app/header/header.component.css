@@ -1,0 +1,33 @@
+.container {
+  background-color: #DAE7F0;
+}
+
+.jumbotron img  {
+  width: 50%; 
+  object-fit: contain; 
+  max-height: 600px;
+  padding-top: 20px;
+  margin-top: 20px;
+  background-color: #EE6C4D;
+}
+
+.jumbotron h1 {
+  color: black;
+}
+
+.jumbotron .container {
+  text-align: center; /* Align the content of the container to the center */
+}
+
+.jumbotron p {
+  margin: 0; /* Remove the default margin around the p elements */
+}
+
+.jumbotron p:first-child {
+  margin-bottom: 0px; /* Add a small margin below the first p element */
+}
+
+
+
+
+

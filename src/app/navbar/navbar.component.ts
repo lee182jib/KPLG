@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  
+  public toggleFlag = false;
+
+  public showDropdown() {
+    this.toggleFlag = !this.toggleFlag;
+  }
 }

@@ -1,3 +1,25 @@
-<h3>{{ firstElement.first_name }} {{ firstElement.second_name }} - {{ firstElement.expected_goals }} Expected goals</h3>
-<img [src]="getPhotoUrl(firstElement.photo)" alt="a photo of the player who played the most minutes. probably salah">
-
+<div class="card bg-light text-center">
+  <div class="row">
+    <div class="col-md-4 order-md-1">
+      <div class="card-header">
+        <h3 class="card-title">{{ firstElement.first_name }} {{ firstElement.second_name }}</h3>
+      </div>
+      <img [src]="getPhotoUrl(firstElement.photo)" alt="a photo of a player" class="img-fluid mx-auto">
+    </div>
+    <div class="col-md-8 order-md-2">
+      <div class="card-body">
+        <ul class="list-group list-group-flush ">
+          <li class="list-group-item">Total Points: {{ firstElement.total_points }}</li>
+          <li class="list-group-item">Points Per Game: {{ firstElement.points_per_game}}</li>
+          <li class="list-group-item">Transfers Out This Season: {{ firstElement.transfers_out }}</li>
+          <li class="list-group-item">Transfers Out This Week: {{ firstElement.transfers_out_event }}</li>
+          <li class="list-group-item">Transfers In This Season: {{ firstElement.transfers_in }}</li>
+          <li class="list-group-item">Transfers In This Week: {{ firstElement.transfers_in_event }}</li>
+          
+          <li class="list-group-item">Minutes Played: {{ firstElement.minutes }}</li>
+          <li class="list-group-item text-muted">{{firstElement.news ? firstElement.news : "No news available"}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
