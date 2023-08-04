@@ -1,0 +1,28 @@
+<div class="container"><div class="comp-title row">
+  <h1 class="text-center">News</h1>
+  <h4 class="text-center">Avoid the bad smell and improve your game</h4>
+  <hr>
+  <p class="intro">There are some players who can ruin your team’s performance like a bad smell. You don’t want to have them in your team, but how do you know who they are? That’s where our tool comes in. It shows you the players who are being transferred out by most managers. It’s an easy way to spot the players who are not worth keeping and who you should replace with better options.</p>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">News</th>
+      <th scope="col">Goals </th>
+      <th scope="col">Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of newsPlayers;">
+      <th scope="row">{{ player.web_name }}</th>
+      <td>{{ player.news}}</td>
+      <td>{{ player.goals_scored}}</td>
+      <td>{{ player.total_points}}</td>
+
+      
+    </tr>
+    
+  </tbody>
+</table>

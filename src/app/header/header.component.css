@@ -1,31 +1,37 @@
 .container {
+  margin-top: 20px;
+  padding-top: 20px;
   background-color: #DAE7F0;
 }
 
 .jumbotron img  {
-  width: 50%; 
   object-fit: contain; 
-  max-height: 600px;
-  padding-top: 20px;
+  max-height: 450px;
+  padding-top: 30px;
   margin-top: 20px;
   background-color: #EE6C4D;
 }
 
 .jumbotron h1 {
-  color: black;
+  margin-top: 20px;
+  color: #140F2D;
+  
 }
 
 .jumbotron .container {
-  text-align: center; /* Align the content of the container to the center */
+  text-align: center; 
 }
 
 .jumbotron p {
-  margin: 0; /* Remove the default margin around the p elements */
+  margin: 0; 
 }
 
-.jumbotron p:first-child {
-  margin-bottom: 0px; /* Add a small margin below the first p element */
+
+
+.d-and-g {
+  padding-bottom: 10px;
 }
+
 
 
 

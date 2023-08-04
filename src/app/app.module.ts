@@ -15,6 +15,7 @@ import { StinkersComponent } from './stinkers/stinkers.component';
 import { DavidmayComponent } from './davidmay/davidmay.component';
 import { HipsterComponent } from './hipster/hipster.component';
 import { StatselectorComponent } from './statselector/statselector.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { StatselectorComponent } from './statselector/statselector.component';
     StinkersComponent,
     DavidmayComponent,
     HipsterComponent,
-    StatselectorComponent
+    StatselectorComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

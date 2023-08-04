@@ -1,0 +1,10 @@
+.comp-title {
+  padding-top: 10px;
+}
+
+.comp-title h1{
+  font-style: normal;
+  background-color: #140F2D;
+  color: #DAE7F0;
+  padding: 20px;
+}

@@ -10,13 +10,13 @@ import { DataService } from '../data.service';
 })
 export class HeaderComponent {
   gameweeks!: any[];
-  currentGameweek!: any[];
-
+  currentGameweek!: string;
   todayDate = new Date();
 
   constructor(private datePipe: DatePipe, private dataService: DataService) {
     this.todayDate = new Date();
   }
+
   ngOnInit() {
     this.getGameWeeks()
     console.log(this.datePipe.transform(this.todayDate, 'dd/MM/yyyy'));
@@ -24,13 +24,15 @@ export class HeaderComponent {
 
   getGameWeeks() {
     this.dataService.getGameWeeks().subscribe((data) => {
-      
-      this.gameweeks = data;
-      console.log('here is gameweek data' + data[0].name);
-      
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].is_current === true) {
+          console.log(data[i].name)
+          this.currentGameweek = data[i].name;
+        } else {
+          this.currentGameweek = "Gameweek 0"
+        }
+      }
     });
   }
-
-
 }
 

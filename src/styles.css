@@ -36,14 +36,49 @@ p {
 }
 
 .intro {
-  padding: 20px;
+  padding: 10px;
   font-style: none;
   font-weight: 300;
+  margin-bottom: 0;
 }
 
 .btn {
   background-color: #140F2D;
   color: #140F2D;
 }
+
+.card-body {
+  padding: 0;
+}
+
+.card .card-footer {
+  color: #EE6C4D;
+  background-color: #140F2D;
+}
+
+.card-title {
+  text-decoration: underline;
+  text-decoration-color: #EE6C4D;
+  text-decoration-thickness: 4px;
+}
+
+.card-text {
+  margin-bottom: 5px;
+}
+
+.comp-title {
+  padding-top: 10px;
+}
+
+.comp-title h1{
+  font-style: normal;
+  background-color: #140F2D;
+  color: #DAE7F0;
+  padding: 20px;
+}
+
+
+
+
 
 

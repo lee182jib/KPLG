@@ -2,9 +2,9 @@
   <div class="container">
     <img src="/assets/images/logo-dark-blue.png" alt="Logo" class="img-fluid"> 
     <h1 class="display-4">KPL GAZETTE</h1>
-    <div>
-    <p class="font-weight-normal">{{todayDate | date:'dd/MM/yyyy'}}</p>
-    <p class="font-weight-normal">{{gameweeks[0].name}}</p>
+  <div class="d-and-g">
+    <p class="date font-weight-normal">{{todayDate | date:'dd/MM/yyyy'}}</p>
+    <p class="gameweek font-weight-normal">{{ currentGameweek }}</p>
   </div>
   </div>
 </div>

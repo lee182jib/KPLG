@@ -1,12 +1,12 @@
-<div class="card bg-light text-center">
+<div class="stinker-of-the-week card bg-light text-center">
   <div class="row">
-    <div class="col-md-4 order-md-1">
+    <div class="stinker-box col-md-4 order-md-1">
       <div class="card-header">
-        <h3 class="card-title">{{ firstElement.first_name }} {{ firstElement.second_name }}</h3>
+        <h3 class="card-title">1. {{ firstElement.first_name }} {{ firstElement.second_name }}</h3>
       </div>
       <img [src]="getPhotoUrl(firstElement.photo)" alt="a photo of a player" class="img-fluid mx-auto">
     </div>
-    <div class="col-md-8 order-md-2">
+    <div class=" col-md-8 order-md-2">
       <div class="card-body">
         <ul class="list-group list-group-flush ">
           <li class="list-group-item">Total Points: {{ firstElement.total_points }}</li>

@@ -1,9 +1,19 @@
-.comp-title {
-  padding-top: 20px;
+
+.position {
+  margin-top: 15px;
+  padding-top: 15px;
+  text-decoration-thickness: 4px;
+  /* background-color: #DAE7F0; */
+  border-top: 3px solid #DAE7F0;
+  font-style: normal;
 }
 
-.comp-title h1{
-  font-style: normal;
-  background-color: #140F2D;
-  color: #DAE7F0;
+.quote {
+  font-style: italic;
+  font-weight: 200;
 }
+
+.forwards {
+  padding-bottom: 30px;
+}
+

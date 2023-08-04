@@ -1,14 +1,17 @@
 <div class="container">
   <div class="comp-title row">
     <h1 class="text-center">Stat Selector</h1>
-    <h3 class="text-center">“I don’t care about statistics. I just want to win trophies.” - Harry Kane</h3>
-
-    <h5 class="intro">Dont make yourself look foolish like Harry Kane. From the menu, pick a stat and discover the top
-      50 players who excel in that area. Find the stats that will make you a winner, unlike Harry. More stat options to be added soon</h5>
+    <h4 class="text-center">“I don’t care about statistics. I just want to win trophies.” - Harry Kane</h4>
+    <hr>
+    <p class="intro">Are you tired of looking foolish like Harry Kane when you play fantasy football? Do you want to know
+      the secrets of the top 50 players in the game? Then you need to check out our menu and select a stat that
+      interests you. You will see a list of the best players who dominate that stat and learn how to improve your own
+      performance. Don’t be like Harry Kane, who has never won anything in his life. Be a winner with our
+      stat options.</p>
   </div>
   <div class="row">
     <div class="col-md-4">
-      
+
     </div>
     <div class="col-md-4">
       <select name="selectedStat" [(ngModel)]="selectedStat" class="form-control mt-3"
@@ -36,7 +39,7 @@
         <div class="card-footer">{{i + 1}}</div>
         <img [src]="getPhotoUrl(element.photo)" class="card-img-top" alt="{{element.web_name}}" />
         <div class="card-body">
-          <h5 class="card-title">{{element.web_name}}</h5>
+          <h4 class="card-title">{{element.web_name}}</h4>
           <p class="card-text" *ngIf="selectedStat === 'total_points'">Total Points: {{element.total_points}}</p>
           <p class="card-text" *ngIf="selectedStat === 'minutes'">Minutes Played: {{element.minutes}}</p>
           <p class="card-text" *ngIf="selectedStat === 'yellow_cards'">Yellow Cards: {{element.yellow_cards}}</p>

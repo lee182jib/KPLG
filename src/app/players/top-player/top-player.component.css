@@ -1,0 +1,16 @@
+.stinker-of-the-week img {
+  background-color: #DAE7F0;
+}
+
+.stinker-of-the-week .card-header {
+  background-color: #140F2D;
+  color: #DAE7F0;
+}
+
+.card-body {
+  background-color: #DAE7F0;
+}
+
+.stinker-box {
+  padding: 0;
+}
