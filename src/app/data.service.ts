@@ -9,6 +9,8 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
+  url: string = 'https://fantasy.premierleague.com/api/bootstrap-static/';
+
   getTopPointsData() {
     return this.http.get('https://fantasy.premierleague.com/api/bootstrap-static/').pipe(
       map((data: any) => {
@@ -38,6 +40,14 @@ export class DataService {
     return this.http.get('https://fantasy.premierleague.com/api/bootstrap-static/').pipe(
       map((data: any) => {
         return data.events;
+      })
+    );
+  }
+
+  geth2h(gw: number) {
+    return this.http.get(`https://fantasy.premierleague.com/api/leagues-h2h-matches/league/1036000/?event=${gw}`).pipe(
+      map((data: any) => {
+        return data.results;
       })
     );
   }

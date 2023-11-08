@@ -7,6 +7,7 @@ import { DavidmayComponent } from './davidmay/davidmay.component';
 import { HipsterComponent } from './hipster/hipster.component';
 import { StatselectorComponent } from './statselector/statselector.component';
 import { NewsComponent } from './news/news.component';
+import { GameweekComponent } from './gameweek/gameweek.component';
 
 const routes: Routes = [
   { path:'', component: StoriesComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'davidmay', component: DavidmayComponent },
   { path: 'hipster', component: HipsterComponent},
   { path: 'statSelector', component: StatselectorComponent},
-  { path: 'news', component: NewsComponent}
+  { path: 'news', component: NewsComponent},
+  { path: 'gameweek', component: GameweekComponent}
 ];
 
 @NgModule({

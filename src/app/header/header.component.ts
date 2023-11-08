@@ -29,7 +29,7 @@ export class HeaderComponent {
           console.log(data[i].name)
           this.currentGameweek = data[i].name;
         } else {
-          this.currentGameweek = "Gameweek 0"
+          console.log('week not found')
         }
       }
     });

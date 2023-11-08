@@ -21,10 +21,12 @@ export class NewsComponent {
       this.newsPlayers = data.filter((e: any) => e.news !== "");
       console.log(this.newsPlayers);
       this.elements = this.newsPlayers.sort((a: any, b: any) => {
-        return b.team_code - a.team_code;
+        return a.web_name.localeCompare(b.web_name);
       });
     });
   }
+  
+  
 
 
 }

@@ -58,11 +58,6 @@ export class HipsterComponent {
     });
   }
 
-
-
-
-
-
   reloadData() {
     this.getHipsterPlayers();
   }

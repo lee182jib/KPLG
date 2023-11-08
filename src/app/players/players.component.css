@@ -8,3 +8,11 @@
   color: #DAE7F0;
   padding: 20px;
 }
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}

@@ -16,6 +16,7 @@ import { DavidmayComponent } from './davidmay/davidmay.component';
 import { HipsterComponent } from './hipster/hipster.component';
 import { StatselectorComponent } from './statselector/statselector.component';
 import { NewsComponent } from './news/news.component';
+import { GameweekComponent } from './gameweek/gameweek.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NewsComponent } from './news/news.component';
     DavidmayComponent,
     HipsterComponent,
     StatselectorComponent,
-    NewsComponent
+    NewsComponent,
+    GameweekComponent
   ],
   imports: [
     BrowserModule,

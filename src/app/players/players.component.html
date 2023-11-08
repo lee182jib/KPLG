@@ -1,22 +1,28 @@
 <h1 class="text-center">Goals Scored Predictions</h1>
 <app-top-player [firstElement]="elements[0]"></app-top-player>
 
-
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Predicted Goals per Game</th>
+      <th scope="col"></th>
       <th scope="col">Goals </th>
-      <th scope="col">Handle</th>
+      <th scope="col">FPL Predicted Goals per Gameweek</th>
+      <th scope="col">Goals per Gameweek</th>
+      <th scope="col">Variance</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let element of elements">
       <th scope="row">{{ element.web_name }}</th>
-      <td>{{ element.expected_goals_per_90}}</td>
       <td>{{ element.goals_scored}}</td>
-      <td>@mdo</td>
+      <td>{{ element.expected_goals_per_90}}</td>
+      <td>{{ element.goals_scored / currentGameweek | number:'1.2-2' }}</td>
+      <td
+      [ngClass]="{
+        'positive' : element.goals_scored / currentGameweek - element.expected_goals_per_90 > 0, 
+        'negative' : element.goals_scored / currentGameweek - element.expected_goals_per_90 < 0}"
+      >{{ (element.goals_scored / currentGameweek - element.expected_goals_per_90) | number:'1.2-2' }}</td>
+
     </tr>
     
   </tbody>
