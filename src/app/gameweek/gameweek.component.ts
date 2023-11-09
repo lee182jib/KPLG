@@ -24,8 +24,11 @@ export class GameweekComponent {
     this.dataService.getGameWeeks().subscribe((data) => {
       for (let i = 0; i < data.length; i++) {
         if (data[i].is_current === true) {
+          console.log(data[i])
           this.currentGameweek = Number (data[i].name.slice (-1));
           this.geth2h();
+          console.log('gameweek is' + this.currentGameweek)
+
           // create gameweek options array
           for (let j = 1; j <= this.currentGameweek; j++) {
             this.gameweekOptions.push(j);
